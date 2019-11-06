@@ -11,7 +11,8 @@
 ### Association
 
 - has_many:messages
-- has-many:through.groups:groups_users
+- has_many:groups_users
+- has-many:groups, through: :groups_users
 
 ## groupsテーブル
 
@@ -20,15 +21,18 @@
 |name|string|null: false|
 ### Association
 
-- has_many :group_users
-- has_many:through.users:group_users
+- has_many :groups_users
+- has_many:users ,through: :group_users
 
 ## messagesテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|text|integer| |
-|img|text|null |
+|text|text| |
+|img|text| |
+|user_id|references|null: false, foreign_key: true|
+|group_id|references|null: false, foreign_key: true|
+
 
 ## Association
 
