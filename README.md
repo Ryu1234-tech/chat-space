@@ -10,8 +10,8 @@
 
 ### Association
 
-- has_many:groups
 - has_many:messages
+- has-many:through.groups:groups_users
 
 ## groupsテーブル
 
@@ -20,15 +20,15 @@
 |name|string|null: false|
 ### Association
 
-- has_many :users
 - has_many :group_users
+- has_many:through.users:group_users
 
 ## messagesテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|text|integer|null: false|
-|img|integer|null: false|
+|text|integer| |
+|img|text|null |
 
 ## Association
 
@@ -39,8 +39,8 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|user_id|references|null: false, foreign_key: true|
+|group_id|references|null: false, foreign_key: true|
 
 ### Association
 
