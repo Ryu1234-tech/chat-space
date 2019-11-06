@@ -43,6 +43,6 @@
 |group_id|integer|null: false, foreign_key: true|
 
 ### Association
-v
+
 - belongs_to :group
 - belongs_to :user
