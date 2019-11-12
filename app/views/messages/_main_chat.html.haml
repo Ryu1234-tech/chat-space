@@ -1,0 +1,23 @@
+.main
+  .main_header
+    .main_header__left-box
+      %h2.main_header__left-box__current-group
+        検証
+      %ul.main_header__left-box__member-list
+        Member：
+        %li.main_header__left-box__member-list__member Ryu
+    .main_header__edit-btn Edit
+  .main_messages
+    .main_messages__text
+      .main_messages__text__upper-info
+        %p.main_messages__text__upper-info__talker Ryu
+        %p.main_messages__text__upper-info__date 2019/11/11(Mon) 20:26:26
+      %p.main_messages__text__page お試し
+  .main_form
+    %form#new_message.new_message
+      .main_form__input-box
+        %input#message_content.input-box__text{name: "message[content]", placeholder: "type a message", type: "text"}
+        %label.input-box__image{for: "message_image"}
+          %i.fa.fa-image
+          %input#message_image.input-box__image__file{name: "message[image]", type: "file", class: "file"}
+      %input.submit-btn{"data-disable-with": "Send",name: "commit",type: "submit",value: "Send"}/
