@@ -1,0 +1,24 @@
+.chat-main
+  .main-header
+    .main-header__left-box
+      %h2.main-header__left-box__current-group{"data-group_id" => "4946"}
+        検証
+      %ul.main-header__left-box__member-list
+        Member：
+        %li.main-header__left-box__member-list__member Ryu
+    %a{:href => "/groups/4946/edit"}
+      .main-header__edit-btn Edit
+  .messages
+    .message{"data-message_id" => "11977"}
+      .message__upper-info
+        %p.message__upper-info__talker Ryu
+        %p.message__upper-info__date 2019/11/11(Mon) 20:26:26
+      %p.message__text お試し
+  .form
+    %form#new_message.new_message{"accept-charset" => "UTF-8", :action => "/groups/4946/messages", :enctype => "multipart/form-data", :method => "post"}
+      .input-box
+        %input#message_content.input-box__text{:name => "message[content]", :placeholder => "type a message", :type => "text"}/
+        %label.input-box__image{:for => "message_image"}
+          %i.fa.fa-image
+          %input#message_image.input-box__image__file{:name => "message[image]", :type => "file", class: "file"}/
+      %input.submit-btn{"data-disable-with" => "Send", :name => "commit", :type => "submit", :value => "Send"}/

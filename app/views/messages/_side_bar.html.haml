@@ -1,0 +1,16 @@
+.chat-side
+  .side-header
+    .side-header__box
+      %p.side-header__box__user-name Ryu
+      %ul.side-header__box__menu
+        %li.side-header__box__menu__new-group
+          %a{:href => "/groups/new"}
+            %i.fa.fa-edit
+        %li.side-header__box__menu__edit-user
+          %a{:href => "/users/2258/edit"}
+            %i.fa.fa-cog
+  .groups
+    %a{:href => "/groups/4946/messages"}
+      .group
+        %p.group__group-name 検証
+        %p.group__latest-message まだメッセージがありません
