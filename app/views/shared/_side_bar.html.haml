@@ -11,18 +11,10 @@
           = link_to edit_user_path(current_user) do
             = fa_icon 'cog', class: 'icon'
   .side_groups
-    .side_groups_group
-      .side_groups_group__name
-        グループ名
-      .side_groups_group__message
-        新着メッセージ
-    .side_groups_group
-      .side_groups_group__name
-        グループ名
-      .side_groups_group__message
-        新着メッセージ
-    .side_groups_group
-      .side_groups_group__name
-        グループ名
-      .side_groups_group__message
-        新着メッセージ
+    - current_user.groups.each do |group|
+      .side_groups_group
+        = link_to '#' do
+          .side_groups_group__name
+            = group.name
+          .side_groups_group__message
+            メッセージはまだありません。
