@@ -11,7 +11,18 @@
           = link_to edit_user_path(current_user) do
             = fa_icon 'cog', class: 'icon'
   .side_groups
-    =link_to "#" do
-      .group
-        %p.group__group-name 検証
-        %p.group__latest-message まだメッセージがありません
+    .side_groups_group
+      .side_groups_group__name
+        グループ名
+      .side_groups_group__message
+        新着メッセージ
+    .side_groups_group
+      .side_groups_group__name
+        グループ名
+      .side_groups_group__message
+        新着メッセージ
+    .side_groups_group
+      .side_groups_group__name
+        グループ名
+      .side_groups_group__message
+        新着メッセージ
