@@ -13,11 +13,25 @@
         %p.main_messages__text__upper-info__talker Ryu
         %p.main_messages__text__upper-info__date 2019/11/11(Mon) 20:26:26
       %p.main_messages__text__page お試し
-  .main_form
-    %form#new_message.new_message
-      .main_form__input-box
-        %input#message_content.input-box__text{name: "message[content]", placeholder: "type a message", type: "text"}
-        %label.input-box__image{for: "message_image"}
-          %i.fa.fa-image
-          %input#message_image.input-box__image__file{name: "message[image]", type: "file", class: "file"}
-      %input.submit-btn{"data-disable-with": "Send",name: "commit",type: "submit",value: "Send"}/
+  .form
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+      .form__mask
+        = f.label :image, class: 'form__mask__image' do
+          = fa_icon 'picture-o', class: "icon"
+          = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'form__submit'
+
+
+
+
+
+
+  -# //.main_form
+  -#   %form#new_message.new_message
+  -#     .main_form__input-box
+  -#       %input#message_content.input-box__text{name: "message[content]", placeholder: "type a message", type: "text"}
+  -#       %label.input-box__image{for: "message_image"}
+  -#         %i.fa.fa-image
+  -#         %input#message_image.input-box__image__file{name: "message[image]", type: "file", class: "file"}
+  -#     %input.submit-btn{"data-disable-with": "Send",name: "commit",type: "submit",value: "Send"}/
