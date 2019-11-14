@@ -2,7 +2,7 @@
   width: calc(100vw - 300px);
   float: left;
   &_header{
-    height: 100px;
+    height: 99px;
     padding: 0 40px;
     display: flex;
     justify-content: space-between;
@@ -30,11 +30,12 @@
       border: solid 1px #38aef0;
       right: 40px;
       position: absolute;
+      margin-top: 30px;
     }
   }
      
   &_messages{
-    height: calc(100vh - 300px);
+    height: calc(100vh - 190px);
     padding: 46px 40px;
     overflow: scroll;
     &__text{
@@ -54,43 +55,87 @@
         margin-bottom: 10px;
       }
     } 
-  }
+  } 
+}  
 
-  &_form{
-    height: 90px;
-    padding: 20px 40px;
-     background-color:#ddd;
-     .new_message{
-      display:flex;
-      padding-top:20px;
-     }
-     &__input-box{
-      position:relative;
-     }
-     .input-box__text{
-      height: 50px;
-      width: 500%;
-      padding: 0 40px 0 10px;
-      color: #434a54;
-      border-style: none;
-     }
-     .input-box__image{
-      font-size: 1.3rem;
-      top: 15px;
-      left: 900px;
-      position: absolute;
-     }
-     .submit-btn{
-      width: 100px;
-      height: 50px;
-      margin-left:800px;
-      color: white;
-      cursor: pointer;
-       background-color: #38aef0;
-     }
-     .file{
-       background-color: slateblue;
-       display: none;
-     }
+.form {
+  background-color: #DDDDDD;
+  box-sizing: border-box;
+  height: 90px;
+  padding: 20px 50px 20px 40px;
+  //display: flex;
+  justify-content: space-between;
+  &__message {
+    border: none;
+    float: left;
+    height: 50px;
+    width: calc(100vw - 550px);
   }
-}   
+  &__mask {
+    height: 50px;
+    float: left;
+    padding-right: 10px;
+    position: relative;
+    right: 40px;
+    &__image {
+      .icon{
+        color: black;
+      }
+      font-size: 20px;
+      line-height: 50px;
+    }
+    .hidden {
+      display: none;
+    }
+  }
+  &__submit {
+    background-color: #38aef0;
+    border: none;
+    color:white;
+    float: right;
+    font-size: 16px;
+    height: 50px;
+    margin-left: 15px;
+    padding: 0 30px;
+  }
+}
+
+
+
+// &_form{
+  //   height: 90px;
+  //   padding: 20px 40px;
+  //    background-color:#ddd;
+  //    .new_message{
+  //     display:flex;
+  //     padding-top:20px;
+  //    }
+  //    &__input-box{
+  //     position:relative;
+  //    }
+  //    .input-box__text{
+  //     height: 50px;
+  //     width: 500%;
+  //     padding: 0 40px 0 10px;
+  //     color: #434a54;
+  //     border-style: none;
+  //    }
+  //    .input-box__image{
+  //     font-size: 1.3rem;
+  //     top: 15px;
+  //     left: 900px;
+  //     position: absolute;
+  //    }
+  //    .submit-btn{
+  //     width: 100px;
+  //     height: 50px;
+  //     margin-left:800px;
+  //     color: white;
+  //     cursor: pointer;
+  //      background-color: #38aef0;
+  //    }
+  //    .file{
+  //      background-color: slateblue;
+  //      display: none;
+  //    }
+  // }
