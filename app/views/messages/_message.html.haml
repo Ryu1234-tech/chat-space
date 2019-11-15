@@ -1,0 +1,22 @@
+.messages_message
+  .messages_message__upper-info
+    .messages_message__upper-info__talker
+      = message.user.name
+    .messages_message__upper-info__date
+      = message.created_at.strftime("%Y/%m/%d %H:%M")
+  .messages_message__text
+    - if message.content.present?
+      %p.messages_message__text__content
+        = message.content
+    = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
+
+
+
+
+
+
+-# .main_messages__text
+-#   .main_messages__text__upper-info
+-#     %p.main_messages__text__upper-info__talker Ryu
+-#     %p.main_messages__text__upper-info__date 2019/11/11(Mon) 20:26:26
+-#   %p.main_messages__text__page お試し
