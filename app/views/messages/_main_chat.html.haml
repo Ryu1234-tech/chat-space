@@ -2,17 +2,13 @@
   .main_header
     .main_header__left-box
       %h2.main_header__left-box__current-group
-        検証
+        =@group.name
       %ul.main_header__left-box__member-list
         Member：
-        %li.main_header__left-box__member-list__member Ryu
+        %li.main_header__left-box__member-list__member 
     .main_header__edit-btn Edit
-  .main_messages
-    .main_messages__text
-      .main_messages__text__upper-info
-        %p.main_messages__text__upper-info__talker Ryu
-        %p.main_messages__text__upper-info__date 2019/11/11(Mon) 20:26:26
-      %p.main_messages__text__page お試し
+  .messages
+    = render @messages
   .form
     = form_for [@group, @message] do |f|
       = f.text_field :content, class: 'form__message', placeholder: 'type a message'
@@ -21,6 +17,9 @@
           = fa_icon 'picture-o', class: "icon"
           = f.file_field :image, class: 'hidden'
       = f.submit 'Send', class: 'form__submit'
+
+
+
 
 
 
