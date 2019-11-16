@@ -4,9 +4,13 @@
       %h2.main_header__left-box__current-group
         =@group.name
       %ul.main_header__left-box__member-list
-        Member：
+        Member:
+        - @group.group_users.each do |group_user|
+          = group_user.user.name
         %li.main_header__left-box__member-list__member 
-    .main_header__edit-btn Edit
+    .main_header__edit-btn 
+      = link_to edit_group_path(@group.id) do
+        Edit
   .messages
     = render @messages
   .form
