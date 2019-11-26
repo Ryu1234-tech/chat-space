@@ -77,18 +77,19 @@
   background-color: #DDDDDD;
   box-sizing: border-box;
   height: 90px;
-  padding: 20px 50px 20px 40px;
+  padding: 20px 32px 20px 42px;
   justify-content: space-between;
   &__message {
     border: none;
     float: left;
     height: 50px;
-    width: calc(100vw - 550px);
+    width: calc(100vw - 490px);
+    padding-left: 10px;
   }
   &__mask {
     height: 50px;
     float: left;
-    padding-right: 10px;
+    // padding-right: 10px;
     position: relative;
     right: 40px;
     &__image {
@@ -109,7 +110,7 @@
     float: right;
     font-size: 16px;
     height: 50px;
-    margin-left: 15px;
+    margin-right: 2px;
     padding: 0 30px;
   }
 }
