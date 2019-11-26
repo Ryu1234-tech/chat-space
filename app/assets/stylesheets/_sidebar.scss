@@ -15,6 +15,10 @@
       font-weight: bold;
       &__menu{
         display: flex;
+        .icon{
+          color: #fff;
+          font-size:16px;
+        }
       }
     }
   }    
@@ -23,17 +27,25 @@
     background-color: #2f3e51;
     padding: 20px 20px 0;
     overflow: scroll;
+    
+   
+    
     .side_groups_group__name{
       color: white;
+      margin-bottom:5px;
+      font-size: 15px;
+      font-weight: bold;
     }
     .side_groups_group__message{
       color: white;
+      margin-bottom: 40px;
+      font-size:11px;
     }
   }
 }
 
-a{
-  color: white;
-  font-size:16px;
-  margin-left: 0.3rem;
- }
+// a{
+//   color: white;
+//   font-size:16px;
+//   margin-left: 0.3rem;
+//  }
